@@ -10,7 +10,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 5fr;
     grid-template-rows: auto 1fr;
     height: 100vh;
 }
@@ -103,6 +103,25 @@ body {
     grid-template-columns: 2fr 1fr;
     padding: 20px;
     column-gap: 20px;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+        "cards announcements"
+        "cards trending";
+    padding: 20px;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.card-section {
+    grid-area: cards;
+}
+
+.announcements {
+    grid-area: announcements;
+}
+
+.trending {
+    grid-area: trending;
 }
 
 .card-section,
