@@ -26,14 +26,14 @@ body {
         "options-icons options"
         "options-icons-2 options-2";
     grid-template-rows: 80px 40% 20% auto;
-    row-gap: 20px;
+    row-gap: 35px;
 }
 
 .logo {
     grid-area: logo;
     color: white;
     cursor: pointer;
-    font-size: 28px;
+    font-size: 30px;
     padding: 10px;
 }
 
@@ -50,16 +50,17 @@ body {
 
 .options {
     grid-area: options;
-    display: grid;
-    grid-template-rows: repeat(6, auto);
-    row-gap: 10px;
 }
 
 .options-icons {
     grid-area: options-icons;
+}
+
+.options,
+.options-icons {
     display: grid;
     grid-template-rows: repeat(6, auto);
-    row-gap: 10px;
+    row-gap: 8px;
 }
 
 .options,
@@ -70,24 +71,24 @@ body {
 
 .icon,
 .icon-2 {
-    min-width: 30px;  
-    max-width: 30px;
-    min-height: 34px; 
-    max-height: 34px;
+    min-width: 24px;  
+    max-width: 24px;
+    min-height: 26px; 
+    max-height: 26px;
 }
 
 .options-icons-2 {
     grid-area: options-icons-2;
     display: grid;
     grid-template-rows: repeat(3, auto);
-    row-gap: 10px;
+    row-gap: 8px;
 }
 
 .options-2 {
     grid-area: options-2;
     display: grid;
     grid-template-rows: repeat(3, auto);
-    row-gap: 10px;
+    row-gap: 8px;
 }
 
 
@@ -95,11 +96,11 @@ body {
 .option-2 {
     color: white;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px;
 }
 
-svg {
+.left-menu svg *{
     fill: white;
 }
 
@@ -107,26 +108,39 @@ svg {
     background-color: #3498db;
     padding: 20px;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 1fr 2fr;
+    row-gap: 20px;
+}
+
+.header-row svg{
+    width: 30px;
+    height: 30px;
 }
 
 .header-row {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: auto 60% auto auto auto;
     align-items: center;
+    justify-content: center;
+}
+
+.header-row svg *{
+    width: 18px;
+    height: 18px;
 }
 
 .lookup {
     background-color: white;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 20px;
+    border: none;
+    height: 30px;
+    margin-right: 30px;
 }
 
-.notification,
-.avatar {
+.avatar img{
     width: 24px;
     height: 24px;
-    background-color: white;
 }
 
 .avatar-big {
