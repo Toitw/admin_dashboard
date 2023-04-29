@@ -11,7 +11,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 1fr 5fr;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: min-content 1fr;
     height: 100vh;
 }
 
@@ -106,27 +106,41 @@ body {
 
 .header {
     background-color: #3498db;
-    padding: 20px;
+    padding: 18px;
     display: grid;
     grid-template-rows: 1fr 2fr;
-    row-gap: 20px;
+    row-gap: 15px;
+    color: white;
 }
 
-.header-row svg{
-    width: 30px;
-    height: 30px;
+.upper-header-row svg{
+    width: 20px;
+    height: 20px;
+    fill: white;
 }
 
-.header-row {
+.upper-header-row {
     display: grid;
-    grid-template-columns: auto 60% auto auto auto;
+    grid-template-columns: min-content 60% auto;
     align-items: center;
-    justify-content: center;
+    column-gap: 5px;
 }
 
-.header-row svg *{
-    width: 18px;
-    height: 18px;
+.right-options {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: end;
+    align-items: center;
+}
+
+.search-icon {
+    margin-top: 4px;
+}
+
+.notification,
+.avatar,
+.right-options span {
+    margin: 0 10px;
 }
 
 .lookup {
@@ -134,33 +148,56 @@ body {
     padding: 10px;
     border-radius: 20px;
     border: none;
-    height: 30px;
-    margin-right: 30px;
+    height: 24px;
+    margin-right: 50px;
 }
 
 .avatar img{
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
 }
 
-.avatar-big {
-    width: 32px;
-    height: 32px;
-    background-color: white;
+.lower-header-row {
+    display: grid;
+    grid-template-columns: min-content auto auto;
+    column-gap: 20px;
+    align-items: center;
+}
+
+.salutation {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.salutation-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.salutation-phrase {
+    display: grid;
+    align-items: end;
+}
+
+.avatar-big img{
+    width: 48px;
+    height: 48px;
 }
 
 .rounded-buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 10px;
+    column-gap: 20px;
 }
 
 .rounded-button {
     background-color: #2ecc71;
     color: white;
     border-radius: 25px;
-    padding: 10px 20px;
+    padding: 8px 11px;
     text-align: center;
+    cursor: pointer;
+    font-weight: bold;
 }
 
 .main {
