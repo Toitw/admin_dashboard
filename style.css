@@ -10,7 +10,7 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 230px auto;
+    grid-template-columns: 210px auto;
     grid-template-rows: min-content 1fr;
     height: 100vh;
 }
@@ -33,7 +33,7 @@ body {
     grid-area: logo;
     color: white;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 24px;
     padding: 10px;
 }
 
@@ -71,10 +71,10 @@ body {
 
 .icon,
 .icon-2 {
-    min-width: 24px;  
-    max-width: 24px;
-    min-height: 26px; 
-    max-height: 26px;
+    min-width: 20px;  
+    max-width: 20px;
+    min-height: 22px; 
+    max-height: 22px;
     cursor: pointer;
 }
 
@@ -97,7 +97,7 @@ body {
 .option-2 {
     color: white;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 14px;
     padding: 10px;
 }
 
@@ -207,7 +207,7 @@ body {
 
 .main {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     padding: 20px;
     column-gap: 20px;
     grid-template-rows: auto auto;
@@ -235,13 +235,12 @@ body {
 .announcements,
 .trending {
     background-color: white;
-    padding: 20px;
     border-radius: 5px;
 }
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
 }
@@ -250,6 +249,23 @@ body {
     background-color: #ecf0f1;
     padding: 15px;
     border-radius: 5px;
+    display: grid;
+    grid-template-rows: 20% auto 20%;
+}
+
+.card h3,
+.card p {
+    margin: 0;
+}
+
+.card h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 14px;
+    color: #7f8c8d;
 }
 
 .card-buttons {
@@ -257,14 +273,21 @@ body {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 5px;
     justify-self: end;
+    align-content: center;
+    margin: 10px 0;
 }
 
 .card-button {
-    background-color: #3498db;
     color: white;
     border-radius: 3px;
     padding: 5px;
     text-align: center;
+    cursor: pointer;
+}
+
+.card-button svg {
+    width: 20px;
+    height: 20px;
 }
 
 .announcements-card {
